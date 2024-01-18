@@ -31,7 +31,7 @@ void f_push(stack_t **node, unsigned int count)
 		free(car.content);
 		free_stack(*node);
 		exit(EXIT_FAILURE); }
-	i = atoi(car.argum);
+	x = atoi(car.argum);
 	if (car.lifi == 0)
 		addnode(node, x);
 	else

@@ -2,21 +2,22 @@
 
 /**
  * f_pall - printing stack
- * @node: pointing node to stack head
+ * @stack: pointing node to stack head
  * @count: number (no used)
  * Return: no return
  */
-
-void f_pall(stack_t **node, unsigned int count)
+void f_pall(stack_t **stack, unsigned int count)
 {
-	stack_t *node;
 	(void)count;
 
-	if (node == NULL)
+	if (*stack == NULL)
 		return;
-	while (node)
+
+	stack_t *curent = *stack;
+
+	while (curent)
 	{
-		printf("%d\n", node->n);
-		node = node->next;
+		printf("%d\n", curent->n);
+		curent = curent->next;
 	}
 }
