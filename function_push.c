@@ -7,7 +7,7 @@
  * Return: no return
  */
 
-void f_push(stack_t **node, unsigned int numero)
+void f_push(stack_t **node, unsigned int count)
 {
 	int x, y = 0, flag = 0;
 
