@@ -2,12 +2,12 @@
 
 /**
  * f_push - function adding node to stack
- * @node: pointing node to stack
+ * @stack: pointing node to stack
  * @count: line number
  * Return: no return
  */
 
-void f_push(stack_t **node, unsigned int count)
+void f_push(stack_t **stack, unsigned int count)
 {
 	int x, y = 0, flag = 0;
 
@@ -23,17 +23,17 @@ void f_push(stack_t **node, unsigned int count)
 		{ fprintf(stderr, "L%d: usage: push integer\n", count);
 			fclose(car.file);
 			free(car.content);
-			free_stack(*node);
+			free_stack(*stack);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", count);
 		fclose(car.file);
 		free(car.content);
-		free_stack(*node);
+		free_stack(*stack);
 		exit(EXIT_FAILURE); }
 	x = atoi(car.argum);
 	if (car.lifi == 0)
-		addnode(node, x);
+		addnode(stack, x);
 	else
-		addqueue(node, x);
+		addqueue(stack, x);
 }

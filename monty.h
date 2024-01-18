@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <ctype.h>
 #include <errno.h>
+#include <string.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -30,7 +31,7 @@ typedef struct stack_s
  * @argum: value argument
  * @file: pointing to monty file
  * @content: line content
- * @lifi: flag change stack <-> queue
+ * @lifi: flag change stack to queue
  * Description: carrying values through the program
  */
 typedef struct car_s
@@ -57,18 +58,18 @@ typedef struct instruction_s
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
-void f_push(stack_t **node, unsigned int count);
+void f_push(stack_t **stack, unsigned int count);
 void f_pall(stack_t **stack, unsigned int count);
-void f_pint(stack_t **node, unsigned int count);
-int execute(char *content, stack_t **node, unsigned int count, FILE *file);
-void free_stack(stack_t *node);
+void f_pint(stack_t **stack, unsigned int count);
+int execute(char *content, stack_t **stack, unsigned int count, FILE *file);
+void free_stack(stack_t *stack);
 void f_pop(stack_t **stack, unsigned int count);
-void f_swap(stack_t **node, unsigned int count);
-void f_add(stack_t **node, unsigned int count);
-void f_nop(stack_t **node, unsigned int count);
-void addnode(stack_t **node, int n);
-void addqueue(stack_t **node, int n);
-void f_queue(stack_t **node, unsigned int count);
-void f_stack(stack_t **node, unsigned int count);
+void f_swap(stack_t **stack, unsigned int count);
+void f_add(stack_t **stack, unsigned int count);
+void f_nop(stack_t **stack, unsigned int count);
+void addnode(stack_t **stack, int n);
+void addqueue(stack_t **stack, int n);
+void f_queue(stack_t **stack, unsigned int count);
+void f_stack(stack_t **stack, unsigned int count);
 
 #endif

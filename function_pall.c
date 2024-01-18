@@ -8,16 +8,16 @@
  */
 void f_pall(stack_t **stack, unsigned int count)
 {
+	stack_t *s;
 	(void)count;
 
-	if (*stack == NULL)
+	s = *stack;
+	if (s == NULL)
 		return;
 
-	stack_t *curent = *stack;
-
-	while (curent)
+	while (s)
 	{
-		printf("%d\n", curent->n);
-		curent = curent->next;
+		printf("%d\n", s->n);
+		s = s->next;
 	}
 }

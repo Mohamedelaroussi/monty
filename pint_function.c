@@ -2,19 +2,19 @@
 
 /**
  * f_pint - printing the top
- * @node: pointing node to stack head
- * @count: number
+ * @stack: pointing node to stack head
+ * @count: line_number
  * Return: no return
 */
-void f_pint(stack_t **node, unsigned int count)
+void f_pint(stack_t **stack, unsigned int count)
 {
-	if (*node == NULL)
+	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
 		fclose(car.file);
 		free(car.content);
-		free_stack(*node);
+		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", (*node)->n);
+	printf("%d\n", (*stack)->n);
 }

@@ -1,6 +1,6 @@
 #include "monty.h"
 #include <stdio.h>
-
+car_t car = {NULL, NULL, NULL, 0};
 /**
  * main - monty code interpreter
  * @argc: arguments's number
