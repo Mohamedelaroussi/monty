@@ -9,7 +9,7 @@ void f_queue(stack_t **stack, unsigned int count)
 {
 	(void)stack;
 	(void)count;
-	car.lifi = 1;
+	bus.lifi = 1;
 }
 
 /**

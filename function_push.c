@@ -11,28 +11,28 @@ void f_push(stack_t **stack, unsigned int count)
 {
 	int x, y = 0, flag = 0;
 
-	if (car.argum)
+	if (bus.argum)
 	{
-		if (car.argum[0] == '-')
+		if (bus.argum[0] == '-')
 			y++;
-		for (; car.argum[y] != '\0'; y++)
+		for (; bus.argum[y] != '\0'; y++)
 		{
-			if (car.argum[y] > 57 || car.argum[y] < 48)
+			if (bus.argum[y] > 57 || bus.argum[y] < 48)
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", count);
-			fclose(car.file);
-			free(car.content);
+			fclose(bus.file);
+			free(bus.content);
 			free_stack(*stack);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", count);
-		fclose(car.file);
-		free(car.content);
+		fclose(bus.file);
+		free(bus.content);
 		free_stack(*stack);
 		exit(EXIT_FAILURE); }
-	x = atoi(car.argum);
-	if (car.lifi == 0)
+	x = atoi(bus.argum);
+	if (bus.lifi == 0)
 		addnode(stack, x);
 	else
 		addqueue(stack, x);

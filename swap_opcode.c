@@ -19,8 +19,8 @@ void f_swap(stack_t **stack, unsigned int count)
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", count);
-		fclose(car.file);
-		free(car.content);
+		fclose(bus.file);
+		free(bus.content);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}

@@ -20,7 +20,7 @@
  * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO Alx project
  */
 typedef struct stack_s
 {
@@ -30,21 +30,21 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct car_s - structure handling global variables
+ * struct bus_s - structure handling global variables
  * @argum: value argument
  * @file: pointing to monty file
  * @content: line content
  * @lifi: flag change stack to queue
  * Description: carrying values through the program
  */
-typedef struct car_s
+typedef struct bus_s
 {
 	char *argum;
 	FILE *file;
 	char *content;
 	int lifi;
-}  car_t;
-extern car_t car;
+}  bus_t;
+extern bus_t bus;
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
