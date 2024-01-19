@@ -9,5 +9,5 @@ void f_stack(stack_t **stack, unsigned int count)
 {
 	(void)stack;
 	(void)count;
-	car.lifi = 0;
+	bus.lifi = 0;
 }

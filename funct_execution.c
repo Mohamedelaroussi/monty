@@ -15,7 +15,6 @@ int execute(char *content, stack_t **stack, unsigned int count, FILE *file)
 				{"swap", f_swap},
 				{"add", f_add},
 				{"nop", f_nop},
-				{"pchar", putchar},
 				{"queue", f_queue},
 				{"stack", f_stack},
 				{NULL, NULL}
@@ -26,7 +25,7 @@ int execute(char *content, stack_t **stack, unsigned int count, FILE *file)
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	car.argum = strtok(NULL, " \n\t");
+	bus.argum = strtok(NULL, " \n\t");
 	while (opst[x].opcode && op)
 	{
 		if (strcmp(op, opst[x].opcode) == 0)
